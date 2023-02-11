@@ -7,6 +7,18 @@
 
 export function doesArrayInclude(array, value) {
   // Your code goes here...
+var included = []
+for(var i=0; i<array.length; i++){
+  if (array[i] == value){
+    included.push(array[i]);
+  }
+}
+  if (included.length == 0){
+    return  false;
+  }
+  else {
+    return  true;
+  }
 
 }
 

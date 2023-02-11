@@ -3,8 +3,26 @@
 // Array example: bankAccounts in /data/data.js
 // getClientWithLeastBalance(bankAccounts) => [{ name: 'SomeName', balance: 32, ... }]
 
+import {
+  bankAccounts
+} from "../data/data";
+
 export function getClientWithLeastBalance(array) {
   // Your code goes here...
+  var clients = [];
+  var minBalance = array[0].balance;
+  for (var i = 1; i < array.length; i++) {
+    if (!array[i].balance == 0 && array[i].balance < minBalance) {
+      minBalance = array[i].balance;
+    };
+  }
+  for (var i = 0; i < array.length; i++) {
+    if (array[i].balance === minBalance) {
+      clients.push(array[i]);
+    }
+
+  }
+  return clients;
 
 }
 

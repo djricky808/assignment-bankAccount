@@ -7,7 +7,13 @@
 
 export function flatArrays(array) {
   // Your code goes here...
-
+var expectedMessage= []
+for(var i=0; i<array.length; i++){
+  for (var x=0; x<array[i].length; x++){
+    expectedMessage.push(array[i][x]);
+  }
+}
+return expectedMessage;
 }
 
 

@@ -5,8 +5,23 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
+  var allWithdrawals = [];
+  var totalWithdrawals = 0;
+  for (var i = 0; i < array.length; i++) {
+    if (array[i].withdrawals == undefined) {
+      totalWithdrawals = 0;
+    } else {
+      for (var x = 0; x < array[i].withdrawals.length; x++) {
+        totalWithdrawals += array[i].withdrawals[x];
+      }
+    }
+    allWithdrawals.push(totalWithdrawals);
+  }
 
+
+  return allWithdrawals;
 }
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-11"

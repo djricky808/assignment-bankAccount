@@ -4,8 +4,15 @@
 
 export function getNumbersWithSquareRoots(max) {
   // Your code goes here...
-
+  var perfectsquare = []
+  for (var i = 0; i <= max; i++) {
+    if (Number.isInteger(Math.sqrt(i))) {
+      perfectsquare.push(+i);
+    }
+  }
+  return perfectsquare;
 }
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-2"
