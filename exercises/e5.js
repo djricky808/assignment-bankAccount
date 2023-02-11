@@ -1,4 +1,3 @@
-
 // EXERCISE 5
 // Return an array of all bank account holders names
 // Array example: bankAccounts in /data/data.js
@@ -6,7 +5,12 @@
 
 export function getAllClientNames(array) {
   // Your code goes here...
+  var clients = [];
 
+  for (var i = 0; i < array.length; i++) {
+    clients.push(array[i].name);
+  }
+  return clients;
 }
 
 
